@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Catálogo - Tienda de Mates</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="header">
+  <div class="header-top">
+    <h1>Tienda de Mates</h1>
+    <div class="header-buttons">
+      <button id="verTodos" class="carrito-btn">🔄 Ver Todos</button>
+      <button id="verFavoritos" class="carrito-btn">❤️ Ver Favoritos</button>
+      <button id="botonCarrito" class="carrito-btn">🛒 Ver Carrito</button>
+    </div>
+  </div>
+  <p id="saludo"></p>
+</div>
+
+
+
+
+  <main class="catalogo">
+    <h2>Catálogo de Productos</h2>
+    <div class="productos-container" id="productosContainer">
+      <!-- Productos se cargarán dinámicamente -->
+    </div>
+    <div class="filtros">
+  <label for="filtroPrecio">Mostrar productos hasta:</label>
+  <select id="filtroPrecio">
+    <option value="100000">Todos</option>
+    <option value="5000">$5000</option>
+    <option value="7000">$7000</option>
+    <option value="10000">$10000</option>
+  </select>
+</div>
+
+  </main>
+
+  <div id="carrito" class="carrito oculto">
+    <h2>Carrito de Compras</h2>
+    <ul id="listaCarrito"></ul>
+    <p id="totalCarrito">Total: $0</p>
+    <button id="vaciarCarrito">Vaciar Carrito</button>
+
+    <button id="finalizarCompra">Finalizar Compra</button>
+
+<!-- Formulario de entrega -->
+<div id="formEntrega" class="oculto">
+  <h3>Datos de Entrega</h3>
+  <input type="text" id="nombreCliente" placeholder="Tu nombre completo" required>
+  <input type="text" id="direccion" placeholder="Dirección de entrega" required>
+  <div id="mapa" style="height: 300px; margin: 10px 0;"></div>
+  <button id="confirmarCompra">Confirmar Pedido</button>
+</div>
+
+  </div>
+
+  <script src="js/catalogo.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD2rlqVR2N8aYEL2fN5iKBDhH3Lxfp1tY&callback=initMap&libraries=places">
+</script>
+
+</body>
+</html>
